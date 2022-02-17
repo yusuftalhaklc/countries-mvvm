@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/feed">
+
+    <fragment
+        android:id="@+id/feed"
+        android:name="com.yusuftalhaklc.countriesudemy.view.Feed"
+        android:label="Feed" >
+        <action
+            android:id="@+id/action_feed_to_country"
+            app:destination="@id/country" />
+    </fragment>
+    <fragment
+        android:id="@+id/country"
+        android:name="com.yusuftalhaklc.countriesudemy.view.Country"
+        android:label="Country" >
+        <action
+            android:id="@+id/action_country_to_feed"
+            app:destination="@id/feed" />
+        <argument
+            android:name="uuid"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>
