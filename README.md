@@ -3,9 +3,11 @@ In this project i will use these ;
 <pre>
 MVVM ✔
 
-Retrofit -
+Retrofit ✔
 
-RxJava -
+RxJava ✔
+
+Glide ✔
 
 Room -
 
