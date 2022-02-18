@@ -7,9 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.bumptech.glide.Glide
 import com.yusuftalhaklc.countriesudemy.R
 import com.yusuftalhaklc.countriesudemy.viewmodel.CountryViewModel
 import kotlinx.android.synthetic.main.fragment_country.*
+import kotlinx.android.synthetic.main.item_row.view.*
 
 class Country : Fragment() {
 
@@ -44,6 +46,11 @@ class Country : Fragment() {
     }
     private fun observeLiveData(){
         viewModel.countryLiveData.observe(viewLifecycleOwner, Observer{
+            Glide.with(this)
+                .load(it.flag)
+                .centerCrop()
+                .into(countryImage)
+
             countryName.text = it.name
             countryCapital.text = it.capital
             countryRegion.text = it.region

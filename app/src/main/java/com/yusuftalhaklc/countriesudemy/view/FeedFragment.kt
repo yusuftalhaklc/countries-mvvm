@@ -18,7 +18,7 @@ import kotlinx.android.synthetic.main.fragment_feed.*
 
 class Feed : Fragment() {
     private lateinit var viewModel:FeedViewModel
-    private val countryAdapter = CountryAdapter(arrayListOf())
+    private lateinit var countryAdapter : CountryAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +35,7 @@ class Feed : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        countryAdapter = CountryAdapter(arrayListOf(),view)
         viewModel = ViewModelProvider(this).get(FeedViewModel::class.java)
         viewModel.refreshData()
         // alt alta göstermemize olanak sağlıyacak.
