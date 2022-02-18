@@ -5,7 +5,7 @@ MVVM ✔
 
 Retrofit ✔
 
-RxJava -
+RxJava ✔
 
 Room -
 
