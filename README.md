@@ -7,6 +7,8 @@ Retrofit ✔
 
 RxJava ✔
 
+Glide ✔
+
 Room -
 
 Data Binding -
