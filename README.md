@@ -13,5 +13,9 @@ Glide ✔
 
 Room -
 
+Coroutines -
+
+SharedPreferences -
+
 Data Binding -
 </pre>
