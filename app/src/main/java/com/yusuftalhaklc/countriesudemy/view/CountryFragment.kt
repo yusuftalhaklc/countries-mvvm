@@ -7,8 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.ui.NavigationUI
+import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
 import com.yusuftalhaklc.countriesudemy.R
+import com.yusuftalhaklc.countriesudemy.util.downloadFormUrl
+import com.yusuftalhaklc.countriesudemy.util.placeholderProgressBar
 import com.yusuftalhaklc.countriesudemy.viewmodel.CountryViewModel
 import kotlinx.android.synthetic.main.fragment_country.*
 import kotlinx.android.synthetic.main.item_row.view.*
@@ -34,23 +38,22 @@ class Country : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel = ViewModelProvider(this).get(CountryViewModel::class.java)
-        viewModel.getDataFromRoom()
-
 
         arguments?.let{
             countryUUID = CountryArgs.fromBundle(it).uuid
         }
-        observeLiveData()
 
+        viewModel = ViewModelProvider(this).get(CountryViewModel::class.java)
+        viewModel.getDataFromRoom(countryUUID)
+
+        observeLiveData()
     }
+
     private fun observeLiveData(){
         viewModel.countryLiveData.observe(viewLifecycleOwner, Observer{
-            Glide.with(this)
-                .load(it.flag)
-                .centerCrop()
-                .into(countryImage)
-
+            context?.let{ context ->
+                countryImage.downloadFormUrl(it.flag, placeholderProgressBar(context))
+            }
             countryName.text = it.name
             countryCapital.text = it.capital
             countryRegion.text = it.region

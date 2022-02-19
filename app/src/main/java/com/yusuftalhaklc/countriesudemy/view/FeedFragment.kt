@@ -37,7 +37,7 @@ class Feed : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         countryAdapter = CountryAdapter(arrayListOf(),view)
         viewModel = ViewModelProvider(this).get(FeedViewModel::class.java)
-        viewModel.refreshData()
+        viewModel.refreshFromApi()
         // alt alta göstermemize olanak sağlıyacak.
         countryList.layoutManager = LinearLayoutManager(context)
         countryList.adapter = countryAdapter

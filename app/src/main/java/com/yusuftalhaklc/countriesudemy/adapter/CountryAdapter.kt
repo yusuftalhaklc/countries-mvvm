@@ -37,7 +37,7 @@ class CountryAdapter (private val countryList:ArrayList<Country>,val view: View)
 
 
         holder.itemView.setOnClickListener{
-            val action = FeedDirections.actionFeedToCountry()
+            val action = FeedDirections.actionFeedToCountry(countryList[position].uuid)
             Navigation.findNavController(it).navigate(action)
         }
     }
