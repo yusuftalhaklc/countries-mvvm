@@ -1,5 +1,5 @@
 # Countries
-In this project i will use these ;
+In this project i used these ;
 <pre>
 Navigation ✔
 
@@ -13,11 +13,11 @@ RxJava ✔
 
 Glide ✔
 
-Room -
+Room ✔
 
-Coroutines -
+Coroutines ✔
 
-SharedPreferences -
+SharedPreferences ✔
 
 Data Binding -
 </pre>
