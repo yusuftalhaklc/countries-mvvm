@@ -19,5 +19,5 @@ Coroutines ✔
 
 SharedPreferences ✔
 
-Data Binding -
+Data Binding ✔
 </pre>
