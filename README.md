@@ -13,11 +13,11 @@ RxJava ✔
 
 Glide ✔
 
-Room -
+Room ✔
 
-Coroutines -
+Coroutines ✔
 
-SharedPreferences -
+SharedPreferences ✔
 
 Data Binding -
 </pre>
