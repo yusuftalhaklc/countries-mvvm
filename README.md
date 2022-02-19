@@ -5,6 +5,8 @@ Navigation ✔
 
 MVVM ✔
 
+LiveData ✔
+
 Retrofit ✔
 
 RxJava ✔
