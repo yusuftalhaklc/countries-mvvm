@@ -17,6 +17,8 @@ Room ✔
 
 Coroutines ✔
 
+Kotlin Extensions ✔
+
 SharedPreferences ✔
 
 Data Binding ✔
