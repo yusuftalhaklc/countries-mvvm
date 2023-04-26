@@ -23,3 +23,4 @@ SharedPreferences ✔
 
 Data Binding ✔
 </pre>
+<h5>Supported by GunseliUnsal 💟</h5>
